@@ -1,4 +1,9 @@
 # Chat_Bot
 
-Pour fonctionner : dl le jeu de donnée via le torrent : 
-magnet:?xt=urn:btih:7690f71ea949b868080401c749e878f98de34d3d&dn=reddit%5Fdata&tr=http%3A%2F%2Ftracker.pushshift.io%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80
+Le jeu de donnée d'entrée se lit dans data.json + stories.md
+Le premier recoupe les différentes entrée user et storie différentes interaction possible.
+La couche d'interpretation du language naturel est gèrée par bot.py
+Le train_initialise.py entraîne notre chatbot.
+L'autre (online) permet un entraînement manuel, et une création plus importante de stories.md
+Le fichier actions.py gère l'ensemble des actions custom (par exemple aller chercher via une API un horscope en ligne) 
+
