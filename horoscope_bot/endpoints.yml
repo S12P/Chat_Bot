@@ -1,0 +1,8 @@
+action_endpoint:
+  url: http://localhost:5050/webhook
+
+# nlg:
+#   url: http://localhost:5056/nlg
+
+core_endpoint:
+  url: http://localhost:5005
