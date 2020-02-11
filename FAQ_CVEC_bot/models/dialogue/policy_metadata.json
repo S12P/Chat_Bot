@@ -3,13 +3,13 @@
     "action_listen": {
       "slots": []
     },
-    "utter_concern": {
-      "slots": []
-    },
     "utter_def": {
       "slots": []
     },
     "utter_howmuch": {
+      "slots": []
+    },
+    "utter_concern": {
       "slots": []
     },
     "utter_greet": {
