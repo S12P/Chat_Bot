@@ -4,11 +4,11 @@ intents:
  - get_concern
  - get_howmuch
  - get_def
- 
+
 
 templates:
   utter_greet:
-    - "Hello! What can I do for you?"
+    - "Bonjour! Que puis-je faire pour vous?"
   utter_concern:
     - "Les étudiants en formation initiale sont concernés. Les apprentis, fonctionnaires élèves, doctorants doivent donc s'acquitter de cette contribution.
 
@@ -16,10 +16,10 @@ Les étudiants internationaux venant dans le cadre d'un échange international s
 
 Les stagiaires de la formation continue ne sont pas concernés."
   utter_howmuch:
-    - "100 e (bc trop cher)"
+    - "100 €"
   utter_def:
-    - "Un impôt caché sur les étudiants"
-  
+    - "Un impôt caché pour les étudiants"
+
 
 actions:
  - utter_greet
