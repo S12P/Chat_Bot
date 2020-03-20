@@ -2,72 +2,62 @@
   "rasa_nlu_data": {
     "common_examples": [
       {
-        "text": "Hello",
+        "text": "Salut",
         "intent": "greeting",
         "entities": []
       },
       {
-        "text": "I want to know if I'm concern by CVEC",
+        "text": "Bonjour",
+        "intent": "greeting",
+        "entities": []
+      },
+      {
+        "text": "Yo",
+        "intent": "greeting",
+        "entities": []
+      },
+      {
+        "text": "Bonsoir",
+        "intent": "greeting",
+        "entities": []
+      },
+      {
+        "text": "Quoi de neuf?",
+        "intent": "greeting",
+        "entities": []
+      },
+      {
+        "text": "Je veux savoir si je suis concerné par la CVEC",
         "intent": "get_concern",
         "entities": []
       },
       {
-        "text": "Can you please tell me if I'm concern by CVEC ?",
+        "text": "Pouvez vous me dire si je suis concerné par la CVEC ?",
         "intent": "get_concern",
         "entities": []
       },
       {
-        "text": "Hi",
-        "intent": "greeting",
-        "entities": []
-      },
-      {
-        "text": "Hello horoscopebot",
-        "intent": "greeting",
-        "entities": []
-      },
-      {
-        "text": "hello bot",
-        "intent": "greeting",
-        "entities": []
-      },
-      {
-        "text": "hi there",
-        "intent": "greeting",
-        "entities": []
-      },
-      {
-        "text": "What's up buddy ?",
-        "intent": "greeting",
-        "entities": []
-      },
-      {
-        "text": "Who has to pay for the CVEC?",
+        "text": "Qui doit payer pour la CVEC?",
         "intent": "get_concern",
         "entities": []
       },
       {
-        "text": "What is CVEC?",
+        "text": "Qu'est ce que la CVEC?",
         "intent": "get_def",
         "entities": []
       },
       {
-        "text": "Can you tell how much I have to pay for CVEC?",
+        "text": "Combien coute la CVEC?",
         "intent": "get_howmuch",
         "entities": []
       },
       {
-        "text": "What's CVEC?",
-        "intent": "get_def",
-        "entities": []
-      },
-      {
-        "text": "I would like to know how much I have to pay for CVEC ?",
+        "text": "Je voudrais savoir combien je dois payer pour la CVEC ?",
         "intent": "get_howmuch",
         "entities": []
       },
       {
-        "text": "For who is the CVEC ?",
+        "text": "Pour qui est la CVEC ?",
         "intent": "get_concern",
         "entities": []
       }
