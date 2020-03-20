@@ -1,0 +1,15 @@
+{
+  "states": [
+    "intent_get_concern",
+    "intent_get_def",
+    "intent_get_howmuch",
+    "intent_greeting",
+    "prev_action_listen",
+    "prev_action_restart",
+    "prev_action_default_fallback",
+    "prev_utter_greet",
+    "prev_utter_concern",
+    "prev_utter_howmuch",
+    "prev_utter_def"
+  ]
+}

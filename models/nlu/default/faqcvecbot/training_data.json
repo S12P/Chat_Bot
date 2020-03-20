@@ -1,0 +1,64 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "intent": "greeting",
+        "text": "Hello"
+      },
+      {
+        "intent": "get_concern",
+        "text": "I want to know if I'm concern by CVEC"
+      },
+      {
+        "intent": "get_concern",
+        "text": "Can you please tell me if I'm concern by CVEC ?"
+      },
+      {
+        "intent": "greeting",
+        "text": "Hi"
+      },
+      {
+        "intent": "greeting",
+        "text": "Hello horoscopebot"
+      },
+      {
+        "intent": "greeting",
+        "text": "hello bot"
+      },
+      {
+        "intent": "greeting",
+        "text": "hi there"
+      },
+      {
+        "intent": "greeting",
+        "text": "What's up buddy ?"
+      },
+      {
+        "intent": "get_concern",
+        "text": "Who has to pay for the CVEC?"
+      },
+      {
+        "intent": "get_def",
+        "text": "What is CVEC?"
+      },
+      {
+        "intent": "get_howmuch",
+        "text": "Can you tell how much I have to pay for CVEC?"
+      },
+      {
+        "intent": "get_def",
+        "text": "What's CVEC?"
+      },
+      {
+        "intent": "get_howmuch",
+        "text": "I would like to know how much I have to pay for CVEC ?"
+      },
+      {
+        "intent": "get_concern",
+        "text": "For who is the CVEC ?"
+      }
+    ],
+    "regex_features": [],
+    "entity_synonyms": []
+  }
+}
