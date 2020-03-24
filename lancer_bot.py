@@ -57,9 +57,8 @@ while(True):
 	mathed_question, score = process.extractOne(query, questions, scorer=fuzz.token_set_ratio) # use process.extract(.. limits = 3) to get multiple close matches
 	if score > 50:
 		matched_row = faq_data.loc[faq_data['question'] == mathed_question,]
-		print("werrgwe",matched_row)
 		match = matched_row['question'].values[0]
 		answer = matched_row['answers'].values[0]
-		print("Here's something I found, \n\n Question: {} \n Answer: {} \n".format(match, answer))
+		print("\n\n Question: {} \n Answer: {} \n".format(match, answer))
 	else:
 		print("Sorry I didn't find anything relevant to your query!")
