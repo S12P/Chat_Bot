@@ -6,11 +6,12 @@ from rasa_core.actions.action import Action
 from rasa_core.events import SlotSet
 
 import pandas as pd
-from fuzzywuzzy import fuzz 
+from fuzzywuzzy import fuzz
 from fuzzywuzzy import process
 
 class GetAnswer(Action):
 	def __init__(self):
+		print("ici2")
 		self.faq_data = pd.read_csv('./data/faq_data.csv')
 
 	def name(self):

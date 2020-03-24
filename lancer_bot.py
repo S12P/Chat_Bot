@@ -19,7 +19,13 @@ from rasa_core.interpreter import RasaNLUInterpreter
 from rasa_core.utils import EndpointConfig
 from rasa_core import utils
 
+import pandas as pd
+from fuzzywuzzy import fuzz
+from fuzzywuzzy import process
+
 logger = logging.getLogger(__name__)
+
+faq_data = pd.read_csv("./data/faq_data.csv")
 
 def train_dialogue(domain_file = 'faq_domain.yml',
 					model_path = './models/dialogue',
@@ -44,4 +50,16 @@ agent = Agent.load(MODEL_PATH, interpreter=interpreter, action_endpoint=action_e
 
 print(agent.is_ready())
 while(True):
-    print(agent.handle_text(input("Votre message :")))
+	query = input("Votre message :")
+	print(agent.handle_text(query))
+
+	questions = faq_data['question'].values.tolist()
+	mathed_question, score = process.extractOne(query, questions, scorer=fuzz.token_set_ratio) # use process.extract(.. limits = 3) to get multiple close matches
+	if score > 50:
+		matched_row = faq_data.loc[faq_data['question'] == mathed_question,]
+		print("werrgwe",matched_row)
+		match = matched_row['question'].values[0]
+		answer = matched_row['answers'].values[0]
+		print("Here's something I found, \n\n Question: {} \n Answer: {} \n".format(match, answer))
+	else:
+		print("Sorry I didn't find anything relevant to your query!")
