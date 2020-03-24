@@ -9,14 +9,20 @@ from rasa_core.policies.keras_policy import KerasPolicy
 from rasa_core.policies.memoization import MemoizationPolicy
 from rasa_core.policies.sklearn_policy import SklearnPolicy
 
+from rasa_core.featurizers import (MaxHistoryTrackerFeaturizer, BinarySingleStateFeaturizer)
+
+
 if __name__ == '__main__':
     utils.configure_colored_logging(loglevel="DEBUG")
 
     training_data_file = './data/stories.md'
     model_path = './models/dialogue'
 
-    agent = Agent("faqcvec_domain.yml",
-                  policies=[MemoizationPolicy(max_history = 2), KerasPolicy()])
+    featurizer = MaxHistoryTrackerFeaturizer(BinarySingleStateFeaturizer(),
+                                         max_history=2)
+
+    agent = Agent("faq_domain.yml",
+                  policies=[MemoizationPolicy(max_history = 2), KerasPolicy(featurizer)])
 
     training_data = agent.load_data(training_data_file)
 

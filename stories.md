@@ -1,19 +1,41 @@
-## Generated Story 1906738276368415355
-* greeting
+## sample story
+* greet
+   - utter_greet
+* goodbye
+   - utter_goodbye
+
+## story_001
+* greet
+   - utter_greet
+* inform
+   - action_get_answer
+
+## Generated Story 8234137205479123135
+* greet
     - utter_greet
-* get_def
-    - utter_def
-* get_howmuch
-    - utter_howmuch
-* get_concern
-    - utter_concern
-* greeting
+*
+    - action_get_answer
+* inform
+    - action_get_answer
+* goodbye
+    - utter_goodbye
+    - export
 
-## Generated Story 7745803128442081309
-* get_concern
-    - utter_concern
-* get_howmuch
-    - utter_howmuch
-* get_def
-    - utter_def
+## Generated Story -7978702732441844240
+* greet
+    - utter_greet
+* need_help
+* inform
+    - action_get_answer
+* goodbye
+    - utter_goodbye
+    - export
 
+## Generated Story 7760879766483755589
+* greet
+    - utter_greet
+* inform
+    - action_get_answer
+* goodbye
+    - utter_goodbye
+    - export

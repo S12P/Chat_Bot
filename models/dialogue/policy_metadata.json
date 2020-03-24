@@ -3,16 +3,10 @@
     "action_listen": {
       "slots": []
     },
-    "utter_concern": {
+    "utter_goodbye": {
       "slots": []
     },
-    "utter_def": {
-      "slots": []
-    },
-    "utter_howmuch": {
-      "slots": []
-    },
-    "utter_greet": {
+    "actions.GetAnswer": {
       "slots": []
     }
   },

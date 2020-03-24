@@ -2,33 +2,23 @@
 ---
 actions:
 - utter_greet
-- utter_concern
-- utter_howmuch
-- utter_def
+- utter_goodbye
+- actions.GetAnswer
 config:
   store_entities_as_slots: true
 entities: []
 intents:
-- greeting:
+- greet:
     use_entities: true
-- get_concern:
+- goodbye:
     use_entities: true
-- get_howmuch:
+- need_help:
     use_entities: true
-- get_def:
+- inform:
     use_entities: true
 slots: {}
 templates:
-  utter_concern:
-  - text: "Les étudiants en formation initiale sont concernés. Les apprentis, fonctionnaires\
-      \ élèves, doctorants doivent donc s'acquitter de cette contribution.\nLes étudiants\
-      \ internationaux venant dans le cadre d'un échange international sont également\
-      \ concernés dans la mesure où ils s'inscrivent à une formation à l'école (DESECL,\
-      \ double diplôme etc...).\nLes stagiaires de la formation continue ne sont pas\
-      \ concernés."
-  utter_def:
-  - text: Un impôt caché sur les étudiants
+  utter_goodbye:
+  - text: Glad to help you! bye!
   utter_greet:
-  - text: Hello! What can I do for you?
-  utter_howmuch:
-  - text: 100 e (bc trop cher)
+  - text: Hello! How can I help?

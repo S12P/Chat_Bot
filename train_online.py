@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 
 
 def train_agent(interpreter):
-    return train.train_dialogue_model(domain_file="faqcvec_domain.yml",
+    return train.train_dialogue_model(domain_file="faq_domain.yml",
                                       stories_file="./data/stories.md",
                                       output_path="./models/dialogue",
                                       nlu_model_path=interpreter,
@@ -27,7 +27,7 @@ def train_agent(interpreter):
 
 if __name__ == '__main__':
     utils.configure_colored_logging(loglevel="DEBUG")
-    nlu_model_path = "./models/nlu/default/faqcvecbot"
+    nlu_model_path = "./models/nlu/default/faq_bot"
     interpreter = NaturalLanguageInterpreter.create(nlu_model_path)
     agent = train_agent(interpreter)
     online.serve_agent(agent)

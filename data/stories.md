@@ -1,52 +1,41 @@
+## sample story
+* greet
+   - utter_greet
+* goodbye
+   - utter_goodbye
+
 ## story_001
-* greeting
-  - utter_greet
-* get_def
-  - utter_def
-* get_concern
-  - utter_concern
-* get_howmuch
-  - utter_howmuch
+* greet
+   - utter_greet
+* inform
+   - actions.GetAnswer
 
-
-## story_002
-* greeting
-  - utter_greet
-* get_def
-  - utter_def
-* get_concern
-  - utter_concern
-
-## story_003
-* greeting
+## Generated Story 8234137205479123135
+* greet
     - utter_greet
-* get_howmuch
-  - utter_howmuch
+*
+    - actions.GetAnswer
+* inform
+    - actions.GetAnswer
+* goodbye
+    - utter_goodbye
+    - export
 
-## Horoscope with sign provided
-* greeting
+## Generated Story -7978702732441844240
+* greet
     - utter_greet
+* need_help
+* inform
+    - actions.GetAnswer
+* goodbye
+    - utter_goodbye
+    - export
 
-## When user directly asks for subscription
-* greeting
+## Generated Story 7760879766483755589
+* greet
     - utter_greet
-* get_def
-  - utter_def
-
-## Generated Story 1906738276368415355
-* greeting
-    - utter_greet
-* get_def
-    - utter_def
-* get_howmuch
-    - utter_howmuch
-* get_concern
-    - utter_concern
-
-## Generated Story 7745803128442081309
-* get_concern
-    - utter_concern
-* get_howmuch
-    - utter_howmuch
-* get_def
-    - utter_def
+* inform
+    - actions.GetAnswer
+* goodbye
+    - utter_goodbye
+    - export

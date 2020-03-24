@@ -2,67 +2,215 @@
   "rasa_nlu_data": {
     "common_examples": [
       {
-        "text": "Salut",
-        "intent": "greeting",
+        "text": "Hello",
+        "intent": "greet",
         "entities": []
       },
       {
-        "text": "Bonjour",
-        "intent": "greeting",
+        "text": "goodbye",
+        "intent": "goodbye",
         "entities": []
       },
       {
-        "text": "Yo",
-        "intent": "greeting",
+        "text": "hey",
+        "intent": "greet",
         "entities": []
       },
       {
-        "text": "Bonsoir",
-        "intent": "greeting",
+        "text": "hello",
+        "intent": "greet",
         "entities": []
       },
       {
-        "text": "Quoi de neuf?",
-        "intent": "greeting",
+        "text": "hi",
+        "intent": "greet",
         "entities": []
       },
       {
-        "text": "Je veux savoir si je suis concerné par la CVEC",
-        "intent": "get_concern",
+        "text": "heya",
+        "intent": "greet",
         "entities": []
       },
       {
-        "text": "Pouvez vous me dire si je suis concerné par la CVEC ?",
-        "intent": "get_concern",
+        "text": "howdy",
+        "intent": "greet",
         "entities": []
       },
       {
-        "text": "Qui doit payer pour la CVEC?",
-        "intent": "get_concern",
+        "text": "hey there",
+        "intent": "greet",
         "entities": []
       },
       {
-        "text": "Qu'est ce que la CVEC?",
-        "intent": "get_def",
+        "text": "bye",
+        "intent": "goodbye",
         "entities": []
       },
       {
-        "text": "Combien coute la CVEC?",
-        "intent": "get_howmuch",
+        "text": "goodbye",
+        "intent": "goodbye",
         "entities": []
       },
       {
-        "text": "Je voudrais savoir combien je dois payer pour la CVEC ?",
-        "intent": "get_howmuch",
+        "text": "bye bye",
+        "intent": "goodbye",
         "entities": []
       },
       {
-        "text": "Pour qui est la CVEC ?",
-        "intent": "get_concern",
+        "text": "see ya",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "see you later",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "How do I create a new git repository?",
+        "intent": "inform",
+        "entities": []
+      },
+      {
+        "text": "How do I add only a portion of a file?",
+        "intent": "inform",
+        "entities": []
+      },
+      {
+        "text": "How do I squash commits?",
+        "intent": "inform",
+        "entities": []
+      },
+      {
+        "text": "How do I change my last commit message?",
+        "intent": "inform",
+        "entities": []
+      },
+      {
+        "text": "How do I change the contents of a commit I have not pushed?",
+        "intent": "inform",
+        "entities": []
+      },
+      {
+        "text": "How do I compare branches?",
+        "intent": "inform",
+        "entities": []
+      },
+      {
+        "text": "How do I push my changes?",
+        "intent": "inform",
+        "entities": []
+      },
+      {
+        "text": "How do I completely reset my local repository?",
+        "intent": "inform",
+        "entities": []
+      },
+      {
+        "text": "create new repo",
+        "intent": "inform",
+        "entities": []
+      },
+      {
+        "text": "add portion of file",
+        "intent": "inform",
+        "entities": []
+      },
+      {
+        "text": "squashing commits",
+        "intent": "inform",
+        "entities": []
+      },
+      {
+        "text": "changing last commit",
+        "intent": "inform",
+        "entities": []
+      },
+      {
+        "text": "commits that not pushed ",
+        "intent": "inform",
+        "entities": []
+      },
+      {
+        "text": "changing commits that haven't pushed",
+        "intent": "inform",
+        "entities": []
+      },
+      {
+        "text": "comparing branches",
+        "intent": "inform",
+        "entities": []
+      },
+      {
+        "text": "pushing changes",
+        "intent": "inform",
+        "entities": []
+      },
+      {
+        "text": "resetting local repo",
+        "intent": "inform",
+        "entities": []
+      },
+      {
+        "text": "how to reset local repository",
+        "intent": "inform",
+        "entities": []
+      },
+      {
+        "text": "does is it",
+        "intent": "inform",
+        "entities": []
+      },
+      {
+        "text": "please how can",
+        "intent": "inform",
+        "entities": []
+      },
+      {
+        "text": "how what",
+        "intent": "inform",
+        "entities": []
+      },
+      {
+        "text": "pls how what",
+        "intent": "inform",
+        "entities": []
+      },
+      {
+        "text": "pls how does what",
+        "intent": "inform",
+        "entities": []
+      },
+      {
+        "text": "ok got it! thank you",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "ok got it",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "ok",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "thanks",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "thank you!",
+        "intent": "goodbye",
+        "entities": []
+      },
+      {
+        "text": "hi!",
+        "intent": "greet",
         "entities": []
       }
-    ],
-    "regex_features": [],
-    "entity_synonyms": []
+    ]
   }
 }
