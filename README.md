@@ -13,8 +13,10 @@ pip3 install rasa-core-sdk==0.11.0
 
 Entrainement
 -----
+python3 nlu_model.py
 python3 bot.py
 python3 train_initialize.py
+
 
 Entrainement intéractif
 ------
