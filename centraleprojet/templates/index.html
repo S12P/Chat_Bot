@@ -1,0 +1,50 @@
+
+<html>
+  <head>
+      <title>Projet Informatique : Chat Bot</title>
+      <meta name=viewport content="width=device-width, initial-scale=1">
+
+      <!--<link rel="icon" type="image/png" href="https://chatbot-ecl-manage.herokuapp.com/test_backend_chatbot/assets/img/logo.png">-->
+      <link rel="icon" type="image/png" href="{{ url_for('.static', filename='img/logo.png') }}">
+      <!-- CSS -->
+      <!--<link rel="stylesheet" href="https://chatbot-ecl-manage.herokuapp.com/test_backend_chatbot/assets/css/font-awesome.css">
+      <link rel="stylesheet" href="https://chatbot-ecl-manage.herokuapp.com/test_backend_chatbot/assets/css/style.css">-->
+      <link rel="stylesheet" href="{{ url_for('.static', filename='css/font-awesome.css') }}">
+      <link rel="stylesheet" href="{{ url_for('.static', filename='css/style.css') }}">
+      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+  </head>
+  <body>
+
+
+    <div class="container">
+
+      <div class="text-center hd1">
+        <img src="{{ url_for('.static', filename='img/logo.png') }}" alt="bot">
+        <br>
+        Projet Informatique
+        <br>
+        
+        <div class="footer text-center">
+          <span class="foo-txt">
+            <br>
+            Textual Big Data : Application du "Deep Learning" au traitement des langues naturelles
+          </span>
+        </div>
+      </div>
+
+      <mybot></mybot>
+
+    </div><!--container end-->
+
+
+    <!--JS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <!--<script src="https://chatbot-ecl-manage.herokuapp.com/test_backend_chatbot/assets/js/script.js"></script>-->
+    <script src="{{ url_for('.static', filename='js/script.js') }}"></script>
+  </body>
+</html>

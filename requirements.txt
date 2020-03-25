@@ -1,0 +1,16 @@
+fuzzywuzzy==0.18.0
+pandas==1.0.3
+pyyaml~=3.12
+packaging~=17.0
+coloredlogs~=10.0
+jsonschema==2.6.0
+setuptools==39.1.0
+rasa-nlu==0.13.2
+rasa-core==0.11.1
+rasa-core-sdk==0.11.0
+requests==2.22.0
+spacy==2.1.4
+sklearn==0.0
+sklearn-crfsuite==0.3.6
+tornado==3.2.1
+
