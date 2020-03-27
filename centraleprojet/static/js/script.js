@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    var baseUrl = "https://centraleprojet.herokuapp.com/webhooks/rasa/webhook?token=mysecret";
+    var baseUrl = "centraleprojet.herokuapp.com/webhooks/rasa/webhook?token=mysecret";
 
     //---------------------------------- Add dynamic html bot content(Widget style) ----------------------------
     // You can also add the html content in html page and still it will work!
