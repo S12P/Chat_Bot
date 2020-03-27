@@ -66,6 +66,9 @@ class MyNewInput(RasaChatInput):
         templates_folder = os.path.join(os.path.dirname(os.path.abspath(__file__)), os.path.join('centraleprojet', 'templates'))
         static_folder = os.path.join(os.path.dirname(os.path.abspath(__file__)), os.path.join('centraleprojet', 'static'))
         custom_webhook = Blueprint('custom_webhook', __name__, template_folder=templates_folder, static_folder=static_folder, root_path=__name__)
+        interpreter = RasaNLUInterpreter('./models/nlu/default/faq_bot')
+        MODEL_PATH = "./models/dialogue"
+        faq_data = pd.read_csv("./data/faq_data.csv")
         @custom_webhook.route("/", methods=['GET'])
         def health():
             return jsonify({"status": "ok"})
@@ -74,10 +77,7 @@ class MyNewInput(RasaChatInput):
             return render_template('index.html')
         @custom_webhook.route("/webhook", methods=['POST'])
         def receive():
-            interpreter = RasaNLUInterpreter('./models/nlu/default/faq_bot')
-            MODEL_PATH = "models/dialogue"
             agent = Agent.load(MODEL_PATH, interpreter=interpreter)
-            faq_data = pd.read_csv("./data/faq_data.csv")
             sender_id = self._extract_sender(request)
             text = self._extract_message(request)
             aht = agent.handle_text(text)
