@@ -111,7 +111,7 @@ class MyNewInput(RasaChatInput):
         return custom_webhook
 
 #input_channel = MyNewInput(url='https://chatbot-ecl-manage.herokuapp.com/')
-input_channel = MyNewInput(url='centraleprojet.herokuapp.com/')
+input_channel = MyNewInput(url='https://centraleprojet.herokuapp.com/')
 # set serve_forever=False if you want to keep the server running
 s = agent.handle_channels([input_channel],  int(os.environ.get('PORT', 5004)), serve_forever=True)
 
