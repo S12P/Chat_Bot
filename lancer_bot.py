@@ -66,9 +66,6 @@ class MyNewInput(RasaChatInput):
         templates_folder = os.path.join(os.path.dirname(os.path.abspath(__file__)), os.path.join('centraleprojet', 'templates'))
         static_folder = os.path.join(os.path.dirname(os.path.abspath(__file__)), os.path.join('centraleprojet', 'static'))
         custom_webhook = Blueprint('custom_webhook', __name__, template_folder=templates_folder, static_folder=static_folder, root_path=__name__)
-        interpreter = RasaNLUInterpreter('./models/nlu/default/faq_bot')
-        MODEL_PATH = "models/dialogue"
-        agent = Agent.load(MODEL_PATH, interpreter=interpreter)
         @custom_webhook.route("/", methods=['GET'])
         def health():
             return jsonify({"status": "ok"})
@@ -77,6 +74,9 @@ class MyNewInput(RasaChatInput):
             return render_template('index.html')
         @custom_webhook.route("/webhook", methods=['POST'])
         def receive():
+            interpreter = RasaNLUInterpreter('./models/nlu/default/faq_bot')
+            MODEL_PATH = "models/dialogue"
+            agent = Agent.load(MODEL_PATH, interpreter=interpreter)
             faq_data = pd.read_csv("./data/faq_data.csv")
             sender_id = self._extract_sender(request)
             text = self._extract_message(request)
@@ -111,7 +111,7 @@ class MyNewInput(RasaChatInput):
         return custom_webhook
 
 #input_channel = MyNewInput(url='https://chatbot-ecl-manage.herokuapp.com/')
-input_channel = MyNewInput(url='https://centraleprojet.herokuapp.com/')
+input_channel = MyNewInput(url='centraleprojet.herokuapp.com/')
 # set serve_forever=False if you want to keep the server running
 s = agent.handle_channels([input_channel],  int(os.environ.get('PORT', 5004)), serve_forever=True)
 
