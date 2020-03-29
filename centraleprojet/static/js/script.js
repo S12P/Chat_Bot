@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    var baseUrl = "https://centraleprojet.herokuapp.com/webhooks/rasa/webhook?token=mysecret";
+    var baseUrl = "localhost:5004";
 
     //---------------------------------- Add dynamic html bot content(Widget style) ----------------------------
     // You can also add the html content in html page and still it will work!
@@ -18,7 +18,7 @@ $(document).ready(function() {
                                         '<div class="bounce2"></div>'+
                                         '<div class="bounce3"></div>'+
                                     '</div>'+
-                                    '<input type="text" id="chat-input" autocomplete="off" placeholder="Ask me about your horoscope"'+ 'class="form-control bot-txt"/>'+
+                                    '<input type="text" id="chat-input" autocomplete="off" placeholder="Ask me something..."'+ 'class="form-control bot-txt"/>'+
                                 '</div>'+
                             '</div><!--chatCont end-->'+
 

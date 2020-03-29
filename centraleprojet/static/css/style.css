@@ -1,9 +1,9 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800|Satisfy);
+@import url(https://fonts.googleapis.com/css?family=Tahoma:400,300,600,700,800|Satisfy);
 
 
 /* General */
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Tahoma', sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
   color: #333;
@@ -49,7 +49,7 @@ a:focus {
   padding: 6px 12px;
   font-size: 14px;
   outline: none;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Tahoma', sans-serif;
 }
 
 /* General end*/
@@ -86,7 +86,7 @@ a:focus {
 .foo-txt {
   font-size: 15px;
   font-weight: 400;
-  font-family: cursive;
+  font-family: Tahoma;
   text-shadow: none;
   color: #272727;
 }
@@ -118,7 +118,9 @@ mybot .chatCont {
   border: 1px solid #dcdcdc;
   bottom: 65px;
   right: 0;
-  background: #efe7dd url(https://s3.amazonaws.com/buildingchatbotswithpython/bg2.png) repeat;
+  background: #F5F5F5;
+  background-image: url(../img/final.png) ;
+  background-size: 100%;
   border-top-left-radius: 3px;
   z-index: 10000;
 display: none;
@@ -155,9 +157,9 @@ mybot .bot_p_img {
 mybot .chatForm {
   position: absolute;
   bottom: -65px;
-	right: 0;
-	margin-bottom: 0;
-	width: 400px;
+  right: 0;
+  margin-bottom: 0;
+  width: 400px;
   display: none;
 }
 
@@ -172,7 +174,7 @@ mybot .bot-txt:focus {
 }
 
 mybot .resultDiv .botResult {
-  background: #fff;
+  background: #acacac;
   color: #000;
   border-radius: 3px;
   padding: 12px;
@@ -195,13 +197,13 @@ mybot .resultDiv .botResult:before {
   height: 0;
   border-top: 0px solid rgba(0, 0, 0, 0);
   border-bottom: 15px solid rgba(0, 0, 0, 0);
-  border-right: 15px solid #fff;
+  border-right: 15px solid #acacac;
   left: -15px;
   margin-top: -12px;
 }
 
 mybot .resultDiv .userEnteredText {
-  background: #9C27B0;
+  background: #96172e;
   float: right;
   color: #ffffff;
   border-radius: 3px;
@@ -225,7 +227,7 @@ mybot .resultDiv .userEnteredText:before {
   height: 0;
   border-top: 0px solid rgba(0, 0, 0, 0);
   border-bottom: 15px solid rgba(0, 0, 0, 0);
-  border-left: 15px solid #9C27B0;
+  border-left: 15px solid #96172e;
   position: absolute;
   right: -15px;
   margin-top: -12px;
@@ -281,7 +283,7 @@ mybot .spinner:before {
   height: 0;
   border-top: 0px solid rgba(0, 0, 0, 0);
   border-bottom: 15px solid rgba(0, 0, 0, 0);
-  border-right: 15px solid #9C27B0;
+  border-right: 15px solid #96172e;
   left: -15px;
   margin-top: -7px;
 }
@@ -349,7 +351,7 @@ mybot .suggestion:before {
   height: 0;
   border-top: 0px solid rgba(0, 0, 0, 0);
   border-bottom: 15px solid rgba(0, 0, 0, 0);
-  border-right: 15px solid #fff;
+  border-right: 15px solid #acacac;
   left: -15px;
   margin-top: -12px;
 }
