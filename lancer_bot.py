@@ -5,13 +5,6 @@ from __future__ import unicode_literals
 
 import logging, os
 
-# from rasa_core.agent import Agent
-# # from rasa_core.channels.console import ConsoleInputChannel
-# from rasa_core.interpreter import RegexInterpreter
-# from rasa_core.policies.keras_policy import KerasPolicy
-# from rasa_core.policies.memoization import MemoizationPolicy
-# from rasa_core.interpreter import RasaNLUInterpreter
-
 from rasa_core.channels.rasa_chat import RasaChatInput
 from rasa_core.channels.channel import CollectingOutputChannel, UserMessage
 from rasa_core.agent import Agent
@@ -27,20 +20,28 @@ from fuzzywuzzy import process
 
 logger = logging.getLogger(__name__)
 
-faq_data = pd.read_csv("./data/faq_data.csv")
+faq_data = pd.read_csv("./data/faq_data.csv") #fichier avec questions/réponses
 
 def train_dialogue(domain_file = 'faq_domain.yml',
                     model_path = './models/dialogue',
                     training_data_file = 'data/stories.md'):
 
+    #   Agent :  A class defined by Rasa that provides an interface to make
+    #   use of most important Rasa Core functionality, such as training,
+    #   handling messages, loading a dialog model, getting the next
+    #   action, and handling a channel.
     agent = Agent(domain_file, policies = [MemoizationPolicy(), KerasPolicy()])
 
+    #    Train : trains the given policies/policy ensemble using data from
+    #    the file provided.
     agent.train(
                 training_data_file,
                 epochs = 300,
                 batch_size = 50,
                 validation_split = 0.2)
 
+    #   Persist : this method is used to persist the agent object in a given
+    #   directory for re-use.
     agent.persist(model_path)
     return agent
 
@@ -93,15 +94,6 @@ class MyNewInput(RasaChatInput):
                     answer = "Sorry I didn't find anything relevant to your query!"
             else:
                 answer = aht[0]['text']
-            #should_use_stream = utils.bool_arg("stream", default=False)
-            '''if should_use_stream:
-                return Response(self.stream_response(on_new_message, text, sender_id), content_type='text/event-stream')
-            else:
-                collector = CollectingOutputChannel()
-                print("Aquí")
-                on_new_message(UserMessage(text, collector, sender_id))
-                print ("json", collector.messages)
-                return jsonify(collector.messages)'''
             reponse = \
                         [{
                             "recipient_id" : sender_id,
@@ -111,27 +103,6 @@ class MyNewInput(RasaChatInput):
         return custom_webhook
 
 #input_channel = MyNewInput(url='https://chatbot-ecl-manage.herokuapp.com/')
-input_channel = MyNewInput(url='https://centraleprojet.herokuapp.com/')
+input_channel = MyNewInput(url='localhost')
 # set serve_forever=False if you want to keep the server running
 s = agent.handle_channels([input_channel],  int(os.environ.get('PORT', 5004)), serve_forever=True)
-
-'''
-agent.is_ready()
-while(True):
-    reponse = ""
-    query = input("Votre message :")
-    aht = agent.handle_text(query)
-    if aht == []:
-        questions = faq_data['question'].values.tolist()
-        mathed_question, score = process.extractOne(query, questions, scorer=fuzz.token_set_ratio) # use process.extract(.. limits = 3) to get multiple close matches
-        if score > 50:
-            matched_row = faq_data.loc[faq_data['question'] == mathed_question,]
-            match = matched_row['question'].values[0]
-            answer = matched_row['answers'].values[0]
-            reponse = "\n\n Question: {} \n Answer: {} \n".format(match, answer)
-        else:
-            reponse = "Sorry I didn't find anything relevant to your query!"
-    else:
-        reponse = aht[0]['text']
-    print(reponse)
-'''
